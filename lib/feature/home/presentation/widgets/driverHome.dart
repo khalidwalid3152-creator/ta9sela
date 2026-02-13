@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -136,10 +138,10 @@ class _DriverHomeState extends State<DriverHome> {
                                         await tripCubit.updateTripStatus(
                                           trip.id,
                                           'rejected',
-                                          const GeoPoint(0, 0),
+                                          GeoPoint(0, 0), // مش مهم الموقع هنا
                                         );
                                       },
-                                    ),
+                                    ),                                                  
                                   ],
                                 ),
                               ),

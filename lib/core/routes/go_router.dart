@@ -112,7 +112,7 @@ class AppRouter {
       GoRoute(
         path: home,
         builder: (context, state) {
-          return homeScreen(user: state.extra, usertype: null);
+          return HomeScreen(user: state.extra, usertype: null);
         },
       ),
 

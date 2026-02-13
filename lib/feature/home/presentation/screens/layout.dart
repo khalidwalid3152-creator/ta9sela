@@ -9,7 +9,6 @@ import 'package:ta9sela/feature/history/presentation/screen/history.dart';
 import 'package:ta9sela/feature/home/presentation/widgets/driverHome.dart';
 
 import 'package:ta9sela/feature/home/presentation/widgets/home_screen.dart';
-import 'package:ta9sela/feature/home/presentation/widgets/livelocation.dart';
 import 'package:ta9sela/feature/profile/presentation/screens/profile.dart';
 
 class MainLayout extends StatefulWidget {
@@ -34,27 +33,28 @@ class _MainLayoutState extends State<MainLayout> {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         backgroundColor: AppColors.whitecolor,
-    
+
         /// 👇 الصفحات
-        body: widget.usertype=='user'?  IndexedStack(
-          index: currentIndex,
-          children: [
-            homeScreen(user: widget.user, usertype: widget.usertype),
-            Histiry(user: widget.user, usertype: widget.usertype),
-            LiveTrackScreen(tripId:''),
-            ProfileScreen(user: widget.user, usertype: widget.usertype),
-     
-    
-          ],
-        ): IndexedStack(
-          index: currentIndex,
-          children: [
-            DriverHome(user: widget.user,usertype: widget.usertype,),
-            Histirydriver(user: widget.user, usertype: widget.usertype),
-            LiveTrackScreen(tripId: ''),
-            ProfileScreen(user: widget.user, usertype: widget.usertype),
-          ],),
-    
+        body: widget.usertype == 'user'
+            ? IndexedStack(
+                index: currentIndex,
+                children: [
+                  HomeScreen(user: widget.user, usertype: widget.usertype),
+                  Histiry(user: widget.user, usertype: widget.usertype),
+
+                  ProfileScreen(user: widget.user, usertype: widget.usertype),
+                ],
+              )
+            : IndexedStack(
+                index: currentIndex,
+                children: [
+                  DriverHome(user: widget.user, usertype: widget.usertype),
+                  Histirydriver(user: widget.user, usertype: widget.usertype),
+
+                  ProfileScreen(user: widget.user, usertype: widget.usertype),
+                ],
+              ),
+
         /// 👇 البوتوم بار
         bottomNavigationBar: AnimatedNotchBottomBar(
           notchBottomBarController: _controller,
@@ -86,16 +86,7 @@ class _MainLayoutState extends State<MainLayout> {
                 color: AppColors.primaryColor1,
               ),
             ),
-           BottomBarItem(
-              inActiveItem: SvgPicture.asset(
-                AppImages.message,
-                color: AppColors.black,
-              ),
-              activeItem: SvgPicture.asset(
-                AppImages.message,
-                color: AppColors.primaryColor1,
-              ),
-            ),
+            
             BottomBarItem(
               inActiveItem: SvgPicture.asset(
                 AppImages.person,
