@@ -40,7 +40,8 @@ class _MainLayoutState extends State<MainLayout> {
                 index: currentIndex,
                 children: [
                   HomeScreen(user: widget.user, usertype: widget.usertype),
-                  Histiry(user: widget.user, usertype: widget.usertype),
+                   History(user: widget.user, usertype: widget.usertype),
+                 // Histirydriver(user: widget.user, usertype: widget.usertype),
 
                   ProfileScreen(user: widget.user, usertype: widget.usertype),
                 ],
