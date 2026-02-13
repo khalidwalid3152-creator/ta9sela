@@ -1,0 +1,1 @@
+enum Usertype { user, driver }

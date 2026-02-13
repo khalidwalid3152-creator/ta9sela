@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1065207278302",
+    "project_id": "ta9sela",
+    "storage_bucket": "ta9sela.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065207278302:android:331a447fba737dcb85b04f",
+        "android_client_info": {
+          "package_name": "com.example.ta9sela"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqw_JI9Go1HkGBHk80IY8g2jbeTn3WaYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065207278302:android:8d0e6b8f5c423e4385b04f",
+        "android_client_info": {
+          "package_name": "com.ta9sela"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqw_JI9Go1HkGBHk80IY8g2jbeTn3WaYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

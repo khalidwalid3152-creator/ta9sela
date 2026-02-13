@@ -1,0 +1,31 @@
+class AppImages {
+  static const String apple = 'assets/icons/apple.svg';
+  static const String call = 'assets/icons/call.svg';
+  static const String camera = 'assets/icons/camera.svg';
+  static const String car = 'assets/icons/car.svg';
+  static const String chat = 'assets/icons/chat.svg';
+  static const String delete = 'assets/icons/delete.svg';
+  static const String email = 'assets/icons/email.svg';
+  static const String falsee = 'assets/icons/false.svg';
+  static const String google = 'assets/icons/google.svg';
+  static const String history = 'assets/icons/history.svg';
+  static const String home = 'assets/icons/home.svg';
+  static const String image = 'assets/icons/image.svg';
+  static const String location = 'assets/icons/location.svg';
+  static const String lock = 'assets/icons/lock.svg';
+  static const String message = 'assets/icons/message.svg';
+  static const String notification = 'assets/icons/notification.svg';
+  static const String person = 'assets/icons/person.svg';
+  static const String phone = 'assets/icons/phone.svg';
+  static const String profile = 'assets/icons/profile.svg';
+  static const String search = 'assets/icons/search.svg';
+  static const String send = 'assets/icons/send.svg';
+  static const String star = 'assets/icons/star.svg';
+  static const String truee = 'assets/icons/true.svg';
+  static const String car1 = 'assets/images/car1.jpeg';
+  static const String car2 = 'assets/images/car2.jpeg';
+  static const String car3 = 'assets/images/car3.jpeg';
+  static const String logo = 'assets/images/logo.png';
+  static const String toyota = 'assets/images/toyota.png';
+  static const String bmw = 'assets/images/car.png';
+} 
