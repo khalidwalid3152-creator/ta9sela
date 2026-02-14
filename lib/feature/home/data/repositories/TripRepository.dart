@@ -11,12 +11,12 @@ class TripRepository {
     return doc.id;
   }
 
-  /// Get trip
-  Future<TripModel?> getTrip(String tripId) async {
-    final doc = await _trips.doc(tripId).get();
-    if (!doc.exists) return null;
-    return TripModel.fromJson(doc.data()!, doc.id);
-  }
+  // /// Get trip
+  // Future<TripModel?> getTrip(String tripId) async {
+  //   final doc = await _trips.doc(tripId).get();
+  //   if (!doc.exists) return null;
+  //   return TripModel.fromJson(doc.data()!, doc.id);
+  // }
 
   /// Update status
   Future<void> updateTripStatus(String tripId, String status,GeoPoint location,) async {
@@ -25,18 +25,18 @@ class TripRepository {
   }
 
   /// Assign driver
-  Future<void> assignDriver(String tripId, String driverId) async {
-    await _trips.doc(tripId).update({
-      'driverId': driverId,
-      'status': 'accepted'
-    });
-  }
+  // Future<void> assignDriver(String tripId, String driverId) async {
+  //   await _trips.doc(tripId).update({
+  //     'driverId': driverId,
+  //     'status': 'accepted'
+  //   });
+  // }
 
   /// Live stream (Tracking)
-  Stream<TripModel> streamTrip(String tripId) {
-    return _trips.doc(tripId).snapshots().map(
-        (doc) => TripModel.fromJson(doc.data()!, doc.id));
-  }
+  // Stream<TripModel> streamTrip(String tripId) {
+  //   return _trips.doc(tripId).snapshots().map(
+  //       (doc) => TripModel.fromJson(doc.data()!, doc.id));
+  // }
 
   /// Trips history
   Stream<List<TripModel>> getTripsByUser(String userId) {

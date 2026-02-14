@@ -74,7 +74,7 @@ class _LiveTrackScreenState extends State<LiveTrackScreen> {
             ),
             child: Text("انهاء الرحلة",
             style: TextStyle(color: Colors.white,fontSize: 12),))),
-        title: const Text("Live Track (Road Route)")),
+        title: const Text("تتبع الرحلة"),),
       body: StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
         stream: FirebaseFirestore.instance
             .collection('trips')

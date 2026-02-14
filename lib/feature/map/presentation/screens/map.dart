@@ -10,6 +10,7 @@ import 'package:ta9sela/feature/home/data/cubits/driverCubit/driverState.dart';
 import 'package:ta9sela/feature/home/data/models/driverModel.dart';
 
 
+// ignore: must_be_immutable
 class HistoryScreen extends StatefulWidget {
   HistoryScreen({super.key, required this.user});
   var user;

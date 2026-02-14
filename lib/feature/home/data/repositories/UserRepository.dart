@@ -11,18 +11,6 @@ class UserRepository {
         .set(user.toJson());
   }
 
-  Future<UserModel?> getUser(String userId) async {
-    final doc =
-        await _firestore.collection('users').doc(userId).get();
-
-    if (!doc.exists) return null;
-
-    return UserModel.fromJson(
-      doc.data()!,
-      doc.id,
-    );
-  }
-
   Future<void> updateUser(UserModel user) async {
     await _firestore
         .collection('users')

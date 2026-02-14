@@ -11,20 +11,6 @@ class UserCubit extends Cubit<UserState> {
 
   UserCubit(this.repository) : super(UserLoading());
 
-  /// 🔹 جلب بيانات المستخدم حسب ID
-  Future<void> getUser(String userId) async {
-    emit(UserLoading());
-    try {
-      final user = await repository.getUser(userId);
-      if (user != null) {
-        emit(UserDone(user:user));
-      } else {
-        emit(UserError("User not found"));
-      }
-    } catch (e) {
-      emit(UserError(e.toString()));
-    }
-  }
 
   /// 🔹 تحديث بيانات المستخدم
   Future<void> updateUser(UserModel user) async {
@@ -58,7 +44,7 @@ class UserCubit extends Cubit<UserState> {
           .where(
             'password',
             isEqualTo: password,
-          ) // لازم تكون مخزنه في Firestore
+          ) 
           .limit(1)
           .get();
 
